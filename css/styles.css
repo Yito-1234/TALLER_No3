@@ -1,0 +1,327 @@
+
+/*Logo Resposive*/
+.ip{
+
+  width: 300px;
+  height: 140px;
+  
+}
+
+
+/*Resposive*/
+
+
+/*movimiento de imagenes*/
+
+.slider {
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  
+  animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+
+.slider img {
+  width: 100%;
+}
+
+@keyframes cambio {
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+  
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+  
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+  
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+/*movimiento de imagenes*/
+
+
+/*animacion de imagenes*/
+h1{
+  color:white;
+  text-shadow: 1px 2px 2px black, 0 0 25px blue,0 0 5px blue;
+  text-align: center;
+}
+
+div.galeria{
+
+  margin: 10px 20px;
+  box-shadow: 0 4px 8px lightskyblue, 0 6px 20px 0 rgba(0,0,0,0.19);
+  float: left;
+  width: 350px;
+
+}
+div.galeria img{
+
+  width: 100%;
+  height: auto;
+
+}
+div.galeria:hover{
+
+  border: 1px solid lightcoral;
+  transform:rotate(-3deg); 
+}
+div.pie{
+
+  text-align: center;
+  text-shadow: 2px 2px 5px purple;
+  padding: 10;
+}
+/*Fin animacion de imagenes*/
+
+
+ /*Grid de imagenes*/
+.wrapper  {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  display: inline-block;
+
+  
+}
+
+.wrapper2  {
+  display: grid;
+  grid-template-columns: repeat(10, 5fr);
+  grid-gap: 10px;
+
+}
+
+/*Fin grid de imagenes*/
+
+
+/*Diseño de cajas de texto*/
+.caja { 
+font-family: sans-serif; 
+font-size: 25px; 
+font-weight: 500; 
+color: #ffffff; 
+background:#4B81E6 ;
+border-radius: 35px 0px 35px 0px;
+-moz-border-radius: 35px 0px 35px 0px;
+-webkit-border-radius: 50px 0px 50px 0px;
+border: 10px solid #5878ca;
+}
+
+.caja-color:hover{
+ background-color:#185D85;
+
+}
+
+
+.caja1 { 
+font-family: sans-serif; 
+font-size: 40px; 
+
+
+color: #ffffff; 
+background:#4B81E6 ;
+
+}
+/*Fin Diseño de cajas de texto*/
+
+
+
+
+
+/*Alineación de logo*/
+#img {position:absolute; top:5px}
+#img {position:absolute; bottom:20px}
+#img {position:absolute; right:5px}
+/* Fin alineación de logo*/
+
+/*Color y diseño de body*/
+  .capa{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+   background: #D0E6E5;
+    color: #ffffff;
+    z-index: -1;
+    top: 0;left: 0;
+  }
+/*Fin color y diseño de body*/
+
+  /*Estilos para el encabezado*/
+  .header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;left: 0;
+  }
+
+  .container .btn-menu, .logo{
+    float: left;
+    line-height:100px;
+  }
+  .container .btn-menu label{
+    color:  #00008B;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .logo h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+  }
+  .container .menu{
+    float: right;
+    line-height: 100px;
+  }
+  .container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+  }
+  .container .menu a:hover{
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+  }
+  /*Fin de Estilos para el encabezado*/
+
+
+  /*Menù lateral*/
+  #btn-menu{
+    display: none;
+  }
+  .container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  #btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+  }
+  .cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1E90FF;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+  }
+  #btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+  }
+  .cont-menu nav{
+    transform: translateY(15%);
+  }
+  .cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #EEF2F3;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+  }
+  .cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+  }
+  .cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  /*Fin de Menù lateral*/
+
+
+/*Formulario de registrarse*/
+.form{
+ padding: 60px;
+  max-width: 400px;
+  background-color: #E7E7E7;
+  margin: 0 auto;
+}
+.field{
+
+  padding: 5px;
+}
+
+.btn{
+
+  display: block;
+  background-color: #0095eb;
+  padding: 10px 45px 10px 45px;
+  border: 0;
+  font-size: 1em; 
+  color:  white;
+  font-family: "Roboto", sans-serif;
+}
+.btn-color{
+  color:white;
+  background-color:#4B81E6 ;
+}
+.btn-color:hover{
+ background-color:#185D85;
+
+}
+.btn-color:active{
+
+  background-color: #9FE2BF;
+}
+form input, form textarea{
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+  border: none; 
+  color: #525c66; 
+  font-size: 1em;
+  resize: horizontal; 
+}
+
+form button {
+  display: block;
+  background-color: #0095eb;
+  padding: 10px 45px 10px 45px;
+  border: 0;
+  font-size: 1em; 
+  color:  white;
+  font-family: "Roboto", sans-serif;
+}
+form button: hover{
+  background-color: #046193;
+}
+textarea { resize: none; }
+
+
+/*Fin Formulario de registrarse*/
+
+
